@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Array_E_Collections
+namespace arrays_e_collections
 {
     class Program
     {

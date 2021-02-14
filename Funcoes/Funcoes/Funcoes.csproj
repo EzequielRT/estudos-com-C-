@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8F110DD0-99A3-412B-954F-5BB7583AAC26}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Funcoes</RootNamespace>
-    <AssemblyName>Funcoes</AssemblyName>
+    <RootNamespace>funcoes</RootNamespace>
+    <AssemblyName>funcoes</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

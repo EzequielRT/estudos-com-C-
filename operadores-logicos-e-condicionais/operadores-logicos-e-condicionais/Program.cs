@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Operadores_Logicos_E_Condicionais
+namespace operadores_logicos_e_condicionais
 {
     class Program
     {

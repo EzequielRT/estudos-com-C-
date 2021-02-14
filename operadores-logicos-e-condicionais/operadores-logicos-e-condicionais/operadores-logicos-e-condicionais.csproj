@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8BA75702-7E72-41AC-AAE7-851E699CA98C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Operadores_Logicos_E_Condicionais</RootNamespace>
-    <AssemblyName>Operadores_Logicos_E_Condicionais</AssemblyName>
+    <RootNamespace>operadores_logicos_e_condicionais</RootNamespace>
+    <AssemblyName>operadores_logicos_e_condicionais</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0CA7513D-611A-4A8F-B43E-2FBAEF06D7B7}</ProjectGuid>
+    <ProjectGuid>{050E4995-957A-41BC-8DD0-D864EAA0594A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Array_E_Collections</RootNamespace>
-    <AssemblyName>Array_E_Collections</AssemblyName>
+    <RootNamespace>funcoes_recursivas</RootNamespace>
+    <AssemblyName>funcoes_recursivas</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
