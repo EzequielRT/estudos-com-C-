@@ -10,13 +10,46 @@ namespace Classes
 {
     public class Cliente
     {
+        /// <summary>
+        /// Construtor com 3 parametros
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <param name="telefone"></param>
+        /// <param name="cpf"></param>
+        public Cliente(string nome, string telefone, string cpf)
+        {
+            this.Nome = nome;
+            this.Telefone = telefone;
+            this.CPF = cpf;
+        }
+
+        /// <summary>
+        /// Construtor sem parametros
+        /// </summary>
+        public Cliente()  { }
+
+        public static string Teste;
+
         public string Nome;
         public string Telefone;
         public string CPF;
 
         public void Gravar()
         {
-            //TODO implementar
+            var clientes = Cliente.LerClientes();
+            clientes.Add(this);
+            if (File.Exists(caminhoBaseClientes()))
+            {
+                StreamWriter r = new StreamWriter(caminhoBaseClientes());
+                r.WriteLine("nome;telefone;cpf;");
+                foreach (Cliente c in clientes)
+                {
+                    var linha = c.Nome + ";" + c.Telefone + ";" + c.CPF + ";";
+                    r.WriteLine(linha);
+                }
+                r.Close();
+            }
+
         }
         private static string caminhoBaseClientes()
         {
@@ -38,11 +71,7 @@ namespace Classes
                         if (i == 1) continue;
                         var clienteArquivo = linha.Split(';');
 
-                        var cliente = new Cliente();
-                        cliente.Nome = clienteArquivo[0];
-                        cliente.CPF = clienteArquivo[1];
-                        cliente.Telefone = clienteArquivo[2];
-
+                        var cliente = new Cliente(clienteArquivo[0], clienteArquivo[1], clienteArquivo[2]);
                         clientes.Add(cliente);
                     }
                 }
