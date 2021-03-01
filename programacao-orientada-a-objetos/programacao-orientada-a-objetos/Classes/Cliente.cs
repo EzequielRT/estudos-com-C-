@@ -34,6 +34,8 @@ namespace Classes
         public string Telefone;
         public string CPF;
 
+        private string sobrenome = "Santos";
+
         public void Gravar()
         {
             var clientes = Cliente.LerClientes();
@@ -49,8 +51,13 @@ namespace Classes
                 }
                 r.Close();
             }
-
         }
+
+        private void Olhar()
+        {
+            Console.WriteLine("O cliente " + this.Nome + " " + this.sobrenome + " está olhando para mim.");
+        }
+
         private static string caminhoBaseClientes()
         {
             return ConfigurationManager.AppSettings["BaseDeClientes"];
