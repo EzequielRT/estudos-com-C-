@@ -14,7 +14,7 @@ namespace programacao_orientada_a_objetos
         {
             //Menu.Criar();
 
-            Console.WriteLine("================ Cadastro de Cliente ===================");
+          /*Console.WriteLine("================ Cadastro de Cliente ===================");
             Cliente c = new Cliente();
             c.Nome = "sss";
             c.Telefone = "23333";
@@ -27,22 +27,22 @@ namespace programacao_orientada_a_objetos
                 Console.WriteLine(cl.Telefone);
                 Console.WriteLine(cl.CPF);
                 Console.WriteLine("===================================");
-            }
+            }*/
 
             Console.WriteLine("================ Cadastro de Usuario ===================");
             Usuario u = new Usuario();
-            u.Nome = "sss";
-            u.Telefone = "23333";
-            u.CPF = "151615";
-            u.Gravar();
+            u.Nome = "eeeee";
+            u.Telefone = "111615165";
+            u.CPF = "14416515616";
+            u.Olhar();
 
-            foreach (Usuario us in Usuario.LerUsuarios())
+          /*foreach (Usuario us in Usuario.LerUsuarios())
             {
                 Console.WriteLine(us.Nome);
                 Console.WriteLine(us.Telefone);
                 Console.WriteLine(us.CPF);
                 Console.WriteLine("===================================");
-            }
+            }*/
             Console.ReadLine();
         }
     }
