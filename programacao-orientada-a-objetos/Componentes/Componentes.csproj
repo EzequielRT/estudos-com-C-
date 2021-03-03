@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{224BCD4F-AC82-45F7-8347-DF61DC500D15}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>programacao_orientada_a_objetos</RootNamespace>
-    <AssemblyName>programacao-orientada-a-objetos</AssemblyName>
+    <ProjectGuid>{4AD7F484-4511-45A9-8C68-5E307F90FFB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Componentes</RootNamespace>
+    <AssemblyName>Componentes</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,7 +32,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,24 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Cliente.cs" />
-    <Compile Include="Classes\Usuario.cs" />
-    <Compile Include="Diretorio\Arquivo.cs" />
-    <Compile Include="Calculo\Media.cs" />
-    <Compile Include="Funcoes\Tabuada.cs" />
-    <Compile Include="Funcoes\TelaCliente.cs" />
-    <Compile Include="Tela\Menu.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Ferramentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Componentes\Componentes.csproj">
-      <Project>{4ad7f484-4511-45a9-8c68-5e307f90ffb6}</Project>
-      <Name>Componentes</Name>
-    </ProjectReference>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
 ﻿using Classes;
+using Componentes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,20 +15,26 @@ namespace programacao_orientada_a_objetos
         {
             //Menu.Criar();
 
-          /*Console.WriteLine("================ Cadastro de Cliente ===================");
-            Cliente c = new Cliente();
-            c.Nome = "sss";
-            c.Telefone = "23333";
-            c.CPF = "151615";
-            c.Gravar();
+            /*Console.WriteLine("================ Cadastro de Cliente ===================");
+              Cliente c = new Cliente();
+              c.Nome = "sss";
+              c.Telefone = "23333";
+              c.CPF = "151615";
+              c.Gravar();
 
-            foreach (Cliente cl in Cliente.LerClientes())
-            {
-                Console.WriteLine(cl.Nome);
-                Console.WriteLine(cl.Telefone);
-                Console.WriteLine(cl.CPF);
-                Console.WriteLine("===================================");
-            }*/
+              foreach (Cliente cl in Cliente.LerClientes())
+              {
+                  Console.WriteLine(cl.Nome);
+                  Console.WriteLine(cl.Telefone);
+                  Console.WriteLine(cl.CPF);
+                  Console.WriteLine("===================================");
+              }*/
+
+            Ferramentas f = new Ferramentas();
+            bool d = f.ValidarCPF("valida cpf");
+
+            Cliente c = new Cliente();
+            c.CalcularUmMaisDois4();
 
             Console.WriteLine("================ Cadastro de Usuario ===================");
             Usuario u = new Usuario();
