@@ -8,11 +8,14 @@ using System.Threading.Tasks;
 using Tela;
 
 namespace programacao_orientada_a_objetos
-{
+{       
     class Program
     {
         static void Main(string[] args)
         {
+            var cachorro = new Cachorro();
+            cachorro.Latir();
+
             //Menu.Criar();
 
             Console.WriteLine("================Cadastro de Cliente===================");

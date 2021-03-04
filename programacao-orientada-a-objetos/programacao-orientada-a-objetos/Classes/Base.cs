@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Classes
 {
-    public class Base : IPessoa
+    public abstract class Base : IPessoa
     {
         public Base(string nome, string telefone, string cpf)
         {
@@ -26,8 +26,6 @@ namespace Classes
         public void SetNome(string nome) { this.Nome = nome; }
         public void SetTelefone(string telefone) { this.Telefone = telefone; }
         public void SetCPF(string cpf) { this.CPF = cpf; }
-
-        private string sobrenome = "Santos";
 
         public virtual void Gravar()
         {
@@ -73,11 +71,6 @@ namespace Classes
                 }
             }
             return dados;
-        }
-
-        public virtual void Olhar()
-        {
-            Console.WriteLine("O cliente " + this.Nome + " " + this.sobrenome + " está olhando para mim");
         }
 
         protected int CalcularUmMaisDois()
