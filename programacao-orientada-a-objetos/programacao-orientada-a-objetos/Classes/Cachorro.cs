@@ -10,6 +10,22 @@ namespace Classes
 {
     public class Cachorro : Animal
     {
+        public int Idade;
+
+        private int IdadePreDefinida = 2;
+
+        public int Idade2 
+        { 
+            get 
+            { 
+                return IdadePreDefinida; 
+            } 
+            set
+            {
+                IdadePreDefinida = value;
+            }
+        }
+
         public override void Latir()
         {
             Console.WriteLine("Au eu sou um cachorrinho");

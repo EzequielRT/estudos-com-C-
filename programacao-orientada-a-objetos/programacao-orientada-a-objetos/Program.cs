@@ -13,6 +13,17 @@ namespace programacao_orientada_a_objetos
     {
         static void Main(string[] args)
         {
+            var c  = new Cachorro();
+            c.Idade = 1;
+            Console.WriteLine(c.Idade);
+
+            c.Idade2 = 1;
+
+            Console.WriteLine(c.Idade2);
+
+            Console.ReadLine();
+
+            /*
             var cachorro = new Cachorro();
             cachorro.Latir();
 
@@ -55,7 +66,6 @@ namespace programacao_orientada_a_objetos
             Cliente c = new Cliente();
             c.CalcularUmMaisDois4();
           */
-            Console.ReadLine();
         }
     }
 }
