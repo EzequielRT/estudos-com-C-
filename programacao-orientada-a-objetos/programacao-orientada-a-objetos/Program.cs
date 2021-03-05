@@ -8,11 +8,50 @@ using System.Threading.Tasks;
 using Tela;
 
 namespace programacao_orientada_a_objetos
-{       
+{  
+    /*
+    class Animal
+    {
+        public string teste;
+
+        public virtual string teste2()
+        {
+            return "";
+        }
+    }
+
+    class Macaco : Animal
+    {
+        public override string teste2()
+        {
+            return "sss";
+        }
+    }*/
+
+    partial class Animal
+    {
+        public string teste;
+        partial void tt();
+    }
+
+    partial class Animal
+    {
+        public string teste2;
+        partial void tt()
+        {
+            Console.Write("teste");
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
+            var a = new Animal();
+
+            a.teste = "";
+
+            /*
             var c  = new Cachorro();
             c.Idade = 1;
             Console.WriteLine(c.Idade);
