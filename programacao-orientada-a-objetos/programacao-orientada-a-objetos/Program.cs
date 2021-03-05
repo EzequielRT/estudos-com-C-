@@ -47,11 +47,21 @@ namespace programacao_orientada_a_objetos
     {
         static void Main(string[] args)
         {
+
+            Email.Instancia.Corpo = "bla bla bla";
+            Email.Instancia.Titulo = "Titulo do email";
+            Email.Instancia.Origem = "ezefuts@gmail.com";
+            Email.Instancia.Destino = "paola@gmail.com";
+
+            Email.Instancia.EnviarEmail();
+
+            Console.ReadLine();
+
+            /*
             var a = new Animal();
 
             a.teste = "";
-
-            /*
+            
             var c  = new Cachorro();
             c.Idade = 1;
             Console.WriteLine(c.Idade);
