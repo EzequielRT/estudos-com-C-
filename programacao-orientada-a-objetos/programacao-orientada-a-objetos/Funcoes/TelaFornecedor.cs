@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Funcoes
 {
-    class TelaCliente
+    class TelaFornecedor
     {
         public static void Chamar()
         {
@@ -15,8 +15,8 @@ namespace Funcoes
             {
                 string mensagem = "Digite uma das opções abaixo:\n" +
                     "\n      0 - Sair do cadastro" +
-                    "\n      1 - Para cadastrar clientes" +
-                    "\n      2 - Para listar clientes";
+                    "\n      1 - Para cadastrar fornecedores" +
+                    "\n      2 - Para listar fornecedores";
                 Console.WriteLine(mensagem);
 
                 Console.Write("\nOpção escolhida: ");
@@ -28,28 +28,32 @@ namespace Funcoes
                 }
                 else if (valor == 1)
                 {
-                    var cliente = new Cliente();
+                    var fornecedor = new Fornecedor();
 
-                    Console.WriteLine("Digite o nome do cliente:");
-                    cliente.Nome = Console.ReadLine();
+                    Console.WriteLine("Digite o CNPJ do fornecedor:");
+                    fornecedor.CNPJ = Console.ReadLine();
 
-                    Console.WriteLine("Digite o telefone do cliente:");
-                    cliente.Telefone = Console.ReadLine();
+                    Console.WriteLine("Digite o nome do fornecedor:");
+                    fornecedor.Nome = Console.ReadLine();
 
-                    Console.WriteLine("Digite o CPF do cliente:");
-                    cliente.CPF = Console.ReadLine();
+                    Console.WriteLine("Digite o telefone do fornecedor:");
+                    fornecedor.Telefone = Console.ReadLine();
 
-                    cliente.Gravar();
+                    Console.WriteLine("Digite o CPF do gerente:");
+                    fornecedor.CPF = Console.ReadLine();
+
+                    fornecedor.Gravar();
                 }
                 else
                 {
-                    var clientes = new Cliente().Ler(); 
-                    foreach (Cliente c in clientes)
+                    var fornecedores = new Fornecedor().Ler(); 
+                    foreach (Fornecedor c in fornecedores)
                     {
                         Console.WriteLine("==========================");
+                        Console.WriteLine("CNPJ: " + c.CNPJ);
                         Console.WriteLine("Nome: " + c.Nome);
                         Console.WriteLine("Telefone: " + c.Telefone);
-                        Console.WriteLine("CPF: " + c.CPF);
+                        Console.WriteLine("CPF do gerente: " + c.CPF);
                         Console.WriteLine("==========================");
                     }
                 }

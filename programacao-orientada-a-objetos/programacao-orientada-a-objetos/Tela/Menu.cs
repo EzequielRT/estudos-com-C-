@@ -16,20 +16,24 @@ namespace Tela
         public const int TABUADA_PROGRAMA = 2;
         public const int CALCULO_MEDIA = 3;
         public const int CADASTRAR_CLIENTES = 4;
+        public const int CADASTRAR_USUARIOS = 5;
+        public const int CADASTRAR_FORNECEDORES = 6;
 
         public static void Criar()
         {
             while (true)
             {
                 string mensagem = "Olá usuário, bem vindo ao programa\n" +
-                    "\n  Utilizando Programação Funcional" +
+                    "\n  Aplicação Console Final" +
                     "\n\n" +
                     "\n    Digite uma das opções abaixo:" +
                     "\n      0 - Sair do Programa" +
                     "\n      1 - Para Ler Arquivos" +
                     "\n      2 - Para Executar a Tabuada" +
                     "\n      3 - Para Calcular Media de Alunos" +
-                    "\n      4 - Cadastrar clientes";
+                    "\n      4 - Cadastrar Clientes" +
+                    "\n      5 - Cadastrar Usuarios" +
+                    "\n      6 - Cadastrar Fornecedores";
                 Console.WriteLine(mensagem);
 
 
@@ -50,7 +54,7 @@ namespace Tela
                 else if (valor == TABUADA_PROGRAMA)
                 {
                     Console.WriteLine("============== Opção Tabuada ==============");
-                    Console.WriteLine("Digite o numero que deseja na tabuada");
+                    Console.Write("Digite o numero que deseja na tabuada: ");
                     int numero = int.Parse(Console.ReadLine());
                     Tabuada.Calcular(numero);
                     Console.ReadLine();
@@ -65,10 +69,24 @@ namespace Tela
                 }
                 else if (valor == CADASTRAR_CLIENTES)
                 {
-                Console.WriteLine("============== Opção Cadastrar Clientes ==============");
-                TelaCliente.Chamar();
-                Console.ReadLine();
-                Console.Clear();
+                    Console.WriteLine("============== Opção Cadastrar Clientes ==============");
+                    TelaCliente.Chamar();
+                    Console.ReadLine();
+                    Console.Clear();
+                }
+                else if (valor == CADASTRAR_USUARIOS)
+                {
+                    Console.WriteLine("============== Opção Cadastrar Usuarios ==============");
+                    TelaUsuario.Chamar();
+                    Console.ReadLine();
+                    Console.Clear();
+                }
+                else if (valor == CADASTRAR_FORNECEDORES)
+                {
+                    Console.WriteLine("============== Opção Cadastrar Fornecedores ==============");
+                    TelaFornecedor.Chamar();
+                    Console.ReadLine();
+                    Console.Clear();
                 }
                 else
                 {
