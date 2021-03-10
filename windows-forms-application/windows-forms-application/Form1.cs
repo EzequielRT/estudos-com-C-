@@ -31,5 +31,12 @@ namespace windows_forms_application
         {
             txtResultado.Text = "Olá Ezequiel este é o seu primeiro programa";
         }
+
+        private void btnAbrir_Click(object sender, EventArgs e)
+        {
+            var form = new FrmShow();
+            form.lblMensagem.Text = txtResultado.Text;
+            form.Show();
+        }
     }
 }

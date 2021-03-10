@@ -32,6 +32,7 @@ namespace windows_forms_application
             this.label1 = new System.Windows.Forms.Label();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
+            this.btnAbrir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -40,7 +41,7 @@ namespace windows_forms_application
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(33, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(393, 25);
+            this.label1.Size = new System.Drawing.Size(495, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pressione OK para preencher a caixa de texto";
             // 
@@ -54,7 +55,7 @@ namespace windows_forms_application
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(36, 128);
+            this.btnOK.Location = new System.Drawing.Point(40, 133);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(390, 105);
             this.btnOK.TabIndex = 2;
@@ -62,11 +63,22 @@ namespace windows_forms_application
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
+            // btnAbrir
+            // 
+            this.btnAbrir.Location = new System.Drawing.Point(40, 258);
+            this.btnAbrir.Name = "btnAbrir";
+            this.btnAbrir.Size = new System.Drawing.Size(181, 41);
+            this.btnAbrir.TabIndex = 3;
+            this.btnAbrir.Text = "Abrir nova janela";
+            this.btnAbrir.UseVisualStyleBackColor = true;
+            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 530);
+            this.Controls.Add(this.btnAbrir);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.label1);
@@ -83,6 +95,7 @@ namespace windows_forms_application
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtResultado;
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Button btnAbrir;
     }
 }
 
