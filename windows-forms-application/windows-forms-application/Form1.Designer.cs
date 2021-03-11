@@ -41,7 +41,7 @@ namespace windows_forms_application
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(33, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(495, 32);
+            this.label1.Size = new System.Drawing.Size(393, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pressione OK para preencher a caixa de texto";
             // 
@@ -77,13 +77,13 @@ namespace windows_forms_application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 530);
+            this.ClientSize = new System.Drawing.Size(759, 562);
             this.Controls.Add(this.btnAbrir);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Aplicação 1";
+            this.Text = "0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
