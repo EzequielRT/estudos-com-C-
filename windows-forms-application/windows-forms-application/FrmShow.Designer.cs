@@ -35,10 +35,11 @@ namespace windows_forms_application
             // lblMensagem
             // 
             this.lblMensagem.AutoSize = true;
-            this.lblMensagem.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMensagem.Location = new System.Drawing.Point(32, 183);
+            this.lblMensagem.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMensagem.Location = new System.Drawing.Point(32, 78);
+            this.lblMensagem.MaximumSize = new System.Drawing.Size(833, 500);
             this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(833, 106);
+            this.lblMensagem.Size = new System.Drawing.Size(627, 81);
             this.lblMensagem.TabIndex = 0;
             this.lblMensagem.Text = "Escrever em run time";
             // 

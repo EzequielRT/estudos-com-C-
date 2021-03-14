@@ -33,6 +33,8 @@ namespace windows_forms_application
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnAbrir = new System.Windows.Forms.Button();
+            this.cboEstados = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -41,7 +43,7 @@ namespace windows_forms_application
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(33, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(393, 25);
+            this.label1.Size = new System.Drawing.Size(495, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pressione OK para preencher a caixa de texto";
             // 
@@ -49,13 +51,13 @@ namespace windows_forms_application
             // 
             this.txtResultado.Location = new System.Drawing.Point(40, 86);
             this.txtResultado.Name = "txtResultado";
-            this.txtResultado.Size = new System.Drawing.Size(382, 27);
+            this.txtResultado.Size = new System.Drawing.Size(488, 27);
             this.txtResultado.TabIndex = 1;
             this.txtResultado.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(40, 133);
+            this.btnOK.Location = new System.Drawing.Point(40, 311);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(390, 105);
             this.btnOK.TabIndex = 2;
@@ -65,7 +67,7 @@ namespace windows_forms_application
             // 
             // btnAbrir
             // 
-            this.btnAbrir.Location = new System.Drawing.Point(40, 258);
+            this.btnAbrir.Location = new System.Drawing.Point(40, 444);
             this.btnAbrir.Name = "btnAbrir";
             this.btnAbrir.Size = new System.Drawing.Size(181, 41);
             this.btnAbrir.TabIndex = 3;
@@ -73,17 +75,67 @@ namespace windows_forms_application
             this.btnAbrir.UseVisualStyleBackColor = true;
             this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
+            // cboEstados
+            // 
+            this.cboEstados.FormattingEnabled = true;
+            this.cboEstados.Items.AddRange(new object[] {
+            "Acre (AC)",
+            "Alagoas (AL)",
+            "Amapá (AP)",
+            "Amazonas (AM)",
+            "Bahia (BA)",
+            "Ceará (CE)",
+            "Distrito Federal (DF)",
+            "Espírito Santo (ES)",
+            "Goiás (GO)",
+            "Maranhão (MA)",
+            "Mato Grosso (MT)",
+            "Mato Grosso do Sul (MS)",
+            "Minas Gerais (MG)",
+            "Pará (PA)",
+            "Paraíba (PB)",
+            "Paraná (PR)",
+            "Pernambuco (PE)",
+            "Piauí (PI)",
+            "Rio de Janeiro (RJ)",
+            "Rio Grande do Norte (RN)",
+            "Rio Grande do Sul (RS)",
+            "Rondônia (RO)",
+            "Roraima (RR)",
+            "Santa Catarina (SC)",
+            "São Paulo (SP)",
+            "Sergipe (SE)",
+            "Tocantins (TO)"});
+            this.cboEstados.Location = new System.Drawing.Point(40, 172);
+            this.cboEstados.Name = "cboEstados";
+            this.cboEstados.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cboEstados.Size = new System.Drawing.Size(488, 28);
+            this.cboEstados.TabIndex = 4;
+            this.cboEstados.Text = "[Selecione]";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(33, 137);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 32);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Estados:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 562);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cboEstados);
             this.Controls.Add(this.btnAbrir);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "0";
+            this.Text = "Aplicação 1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -96,6 +148,8 @@ namespace windows_forms_application
         private System.Windows.Forms.TextBox txtResultado;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnAbrir;
+        private System.Windows.Forms.ComboBox cboEstados;
+        private System.Windows.Forms.Label label2;
     }
 }
 
