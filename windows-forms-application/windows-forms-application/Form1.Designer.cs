@@ -35,6 +35,9 @@ namespace windows_forms_application
             this.btnAbrir = new System.Windows.Forms.Button();
             this.cboEstados = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.lblNomeGrid = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,7 +70,7 @@ namespace windows_forms_application
             // 
             // btnAbrir
             // 
-            this.btnAbrir.Location = new System.Drawing.Point(40, 444);
+            this.btnAbrir.Location = new System.Drawing.Point(40, 533);
             this.btnAbrir.Name = "btnAbrir";
             this.btnAbrir.Size = new System.Drawing.Size(181, 41);
             this.btnAbrir.TabIndex = 3;
@@ -123,11 +126,32 @@ namespace windows_forms_application
             this.label2.TabIndex = 5;
             this.label2.Text = "Estados:";
             // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(465, 362);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.RowTemplate.Height = 29;
+            this.dataGridView.Size = new System.Drawing.Size(483, 185);
+            this.dataGridView.TabIndex = 6;
+            // 
+            // lblNomeGrid
+            // 
+            this.lblNomeGrid.AutoSize = true;
+            this.lblNomeGrid.Location = new System.Drawing.Point(608, 337);
+            this.lblNomeGrid.Name = "lblNomeGrid";
+            this.lblNomeGrid.Size = new System.Drawing.Size(205, 20);
+            this.lblNomeGrid.TabIndex = 7;
+            this.lblNomeGrid.Text = "Dados da coleção de estados";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 562);
+            this.ClientSize = new System.Drawing.Size(986, 586);
+            this.Controls.Add(this.lblNomeGrid);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboEstados);
             this.Controls.Add(this.btnAbrir);
@@ -137,6 +161,7 @@ namespace windows_forms_application
             this.Name = "Form1";
             this.Text = "Aplicação 1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,6 +175,8 @@ namespace windows_forms_application
         private System.Windows.Forms.Button btnAbrir;
         private System.Windows.Forms.ComboBox cboEstados;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Label lblNomeGrid;
     }
 }
 

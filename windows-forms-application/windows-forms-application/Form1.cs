@@ -10,43 +10,6 @@ using System.Windows.Forms;
 
 namespace windows_forms_application
 {
-    public class Estado
-    {
-        public int Id;
-        public string Nome;
-
-        public override string ToString()
-        {
-            return this.Nome;
-        }
-
-        public static List<Estado> Lista()
-        {
-            var lista = new List<Estado>();
-            var e1 = new Estado();
-            e1.Id = 1;
-            e1.Nome = "SP";
-            lista.Add(e1);
-
-            e1 = new Estado();
-            e1.Id = 2;
-            e1.Nome = "RJ";
-            lista.Add(e1);
-
-            e1 = new Estado();
-            e1.Id = 3;
-            e1.Nome = "GO";
-            lista.Add(e1);
-
-            e1 = new Estado();
-            e1.Id = 4;
-            e1.Nome = "RS";
-            lista.Add(e1);
-
-            return lista;
-        }
-    }
-
     public partial class Form1 : Form
     {
         public Form1()  // Construtor da classe
@@ -58,11 +21,51 @@ namespace windows_forms_application
         private void Form1_Load(object sender, EventArgs e)
         {
             //MessageBox.Show("Inicializando o formulário");
-            cboEstados.Items.Clear();
+
+            /***********************************************/
+            cboEstados.DataSource = Estado.Lista();
+            cboEstados.Text = "[Selecione]";
+
+            /*cboEstados.Items.Clear(); 
             foreach (Estado estado in Estado.Lista())
             {
                 cboEstados.Items.Add(estado);
+            }*/
+            /***********************************************/
+
+            //Maneira simples de utilizar
+            //dataGridView.DataSource = Estado.Lista();
+
+            //Maneira intermediária de utilizar
+            //Utilizando Link
+            var data = from estado in Estado.Lista()
+                       //where estado.Id == 1 || estado.Id == 2
+                       //orderby estado.Nome
+                       select new
+                       {
+                           Id = estado.Id,
+                           Nome = estado.Nome
+                       };
+
+            dataGridView.DataSource = data.ToList();
+
+            //Maneira complexa de utilizar
+            /*dataGridView.ColumnCount = 2;
+            dataGridView.Columns[0].Name = "Id";
+            dataGridView.Columns[1].Name = "Nome";
+
+            var rows = new List<string[]>();
+            foreach (Estado estado in Estado.Lista())
+            {
+                string[] row1 = new string[] { estado.Id.ToString(), estado.Nome };
+                rows.Add(row1);
             }
+
+            foreach (string[] rowArray in rows)
+            {
+                dataGridView.Rows.Add(rowArray);
+            }*/
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
