@@ -20,8 +20,6 @@ namespace windows_forms_application
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show("Inicializando o formulário");
-
             /***********************************************/
             cboEstados.DataSource = Estado.Lista();
             cboEstados.Text = "[Selecione]";
@@ -38,7 +36,7 @@ namespace windows_forms_application
 
             //Maneira intermediária de utilizar
             //Utilizando Link
-            var data = from estado in Estado.Lista()
+            /*var data = from estado in Estado.Lista()
                        //where estado.Id == 1 || estado.Id == 2
                        //orderby estado.Nome
                        select new
@@ -47,10 +45,10 @@ namespace windows_forms_application
                            Nome = estado.Nome
                        };
 
-            dataGridView.DataSource = data.ToList();
+            dataGridView.DataSource = data.ToList();*/
 
             //Maneira complexa de utilizar
-            /*dataGridView.ColumnCount = 2;
+            dataGridView.ColumnCount = 2;
             dataGridView.Columns[0].Name = "Id";
             dataGridView.Columns[1].Name = "Nome";
 
@@ -64,25 +62,48 @@ namespace windows_forms_application
             foreach (string[] rowArray in rows)
             {
                 dataGridView.Rows.Add(rowArray);
-            }*/
+            }
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnOK_Click(object sender, EventArgs e)
+        private void BtnOK_Click(object sender, EventArgs e)
         {
             txtResultado.Text = "Olá Ezequiel este é o seu primeiro programa - " + ((Estado)cboEstados.SelectedItem).Id;
         }
 
-        private void btnAbrir_Click(object sender, EventArgs e)
+        private void BtnAbrir_Click(object sender, EventArgs e)
         {
+
+            MessageBox.Show("Inicializando novo formulário");
+
             var form = new FrmShow();
             form.lblMensagem.Text = txtResultado.Text;
             form.Show();
+        }
+
+        private void NovoTexto_Click(object sender, EventArgs e)
+        {
+            new FrmTexto().Show();
+        }
+
+        private void Sair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Sobre_Click(object sender, EventArgs e)
+        {
+            new FrmSobre().Show();
+        }
+
+        private void Licenca_Click(object sender, EventArgs e)
+        {
+            new FrmLicenca().Show();
+        }
+
+        private void Doacao_Click(object sender, EventArgs e)
+        {
+            new FrmDoacao().Show();
         }
     }
 }
