@@ -29,6 +29,7 @@ namespace windows_forms_application
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
@@ -45,6 +46,8 @@ namespace windows_forms_application
             this.sobre = new System.Windows.Forms.ToolStripMenuItem();
             this.licenca = new System.Windows.Forms.ToolStripMenuItem();
             this.doacao = new System.Windows.Forms.ToolStripMenuItem();
+            this.LblHoraAtual = new System.Windows.Forms.Label();
+            this.Timer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +58,7 @@ namespace windows_forms_application
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(33, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(393, 25);
+            this.label1.Size = new System.Drawing.Size(495, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pressione OK para preencher a caixa de texto";
             // 
@@ -130,7 +133,7 @@ namespace windows_forms_application
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(33, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 25);
+            this.label2.Size = new System.Drawing.Size(99, 32);
             this.label2.TabIndex = 5;
             this.label2.Text = "Estados:";
             // 
@@ -149,7 +152,7 @@ namespace windows_forms_application
             this.lblNomeGrid.AutoSize = true;
             this.lblNomeGrid.Location = new System.Drawing.Point(608, 337);
             this.lblNomeGrid.Name = "lblNomeGrid";
-            this.lblNomeGrid.Size = new System.Drawing.Size(159, 15);
+            this.lblNomeGrid.Size = new System.Drawing.Size(205, 20);
             this.lblNomeGrid.TabIndex = 7;
             this.lblNomeGrid.Text = "Dados da coleção de estados";
             // 
@@ -219,11 +222,28 @@ namespace windows_forms_application
             this.doacao.Text = "Doação";
             this.doacao.Click += new System.EventHandler(this.Doacao_Click);
             // 
+            // LblHoraAtual
+            // 
+            this.LblHoraAtual.AutoSize = true;
+            this.LblHoraAtual.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LblHoraAtual.Location = new System.Drawing.Point(465, 242);
+            this.LblHoraAtual.Name = "LblHoraAtual";
+            this.LblHoraAtual.Size = new System.Drawing.Size(473, 37);
+            this.LblHoraAtual.TabIndex = 9;
+            this.LblHoraAtual.Text = "Dia e Hora atual: 01/01/0000 00:00:00";
+            // 
+            // Timer
+            // 
+            this.Timer.Enabled = true;
+            this.Timer.Interval = 1000;
+            this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 680);
+            this.Controls.Add(this.LblHoraAtual);
             this.Controls.Add(this.lblNomeGrid);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label2);
@@ -263,6 +283,8 @@ namespace windows_forms_application
         private System.Windows.Forms.ToolStripMenuItem sobre;
         private System.Windows.Forms.ToolStripMenuItem licenca;
         private System.Windows.Forms.ToolStripMenuItem doacao;
+        private System.Windows.Forms.Label LblHoraAtual;
+        private System.Windows.Forms.Timer Timer;
     }
 }
 

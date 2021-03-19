@@ -20,6 +20,8 @@ namespace windows_forms_application
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            atualizaHora();
+
             /***********************************************/
             cboEstados.DataSource = Estado.Lista();
             cboEstados.Text = "[Selecione]";
@@ -66,6 +68,11 @@ namespace windows_forms_application
 
         }
 
+        private void atualizaHora()
+        {
+            LblHoraAtual.Text = "Dia e Hora atual: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+        }
+
         private void BtnOK_Click(object sender, EventArgs e)
         {
             txtResultado.Text = "Olá Ezequiel este é o seu primeiro programa - " + ((Estado)cboEstados.SelectedItem).Id;
@@ -104,6 +111,11 @@ namespace windows_forms_application
         private void Doacao_Click(object sender, EventArgs e)
         {
             new FrmDoacao().Show();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            atualizaHora();
         }
     }
 }
