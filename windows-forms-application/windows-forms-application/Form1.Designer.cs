@@ -30,6 +30,7 @@ namespace windows_forms_application
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
@@ -49,6 +50,8 @@ namespace windows_forms_application
             this.Cadastro = new System.Windows.Forms.ToolStripMenuItem();
             this.LblHoraAtual = new System.Windows.Forms.Label();
             this.Timer = new System.Windows.Forms.Timer(this.components);
+            this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.BtnNotificacao = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -166,7 +169,7 @@ namespace windows_forms_application
             this.Cadastro});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1029, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1029, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = " ";
             // 
@@ -176,20 +179,20 @@ namespace windows_forms_application
             this.novoTexto,
             this.sair});
             this.Arquivo.Name = "Arquivo";
-            this.Arquivo.Size = new System.Drawing.Size(75, 24);
+            this.Arquivo.Size = new System.Drawing.Size(53, 20);
             this.Arquivo.Text = "Arquivo";
             // 
             // novoTexto
             // 
             this.novoTexto.Name = "novoTexto";
-            this.novoTexto.Size = new System.Drawing.Size(166, 26);
+            this.novoTexto.Size = new System.Drawing.Size(133, 26);
             this.novoTexto.Text = "Novo texto";
             this.novoTexto.Click += new System.EventHandler(this.NovoTexto_Click);
             // 
             // sair
             // 
             this.sair.Name = "sair";
-            this.sair.Size = new System.Drawing.Size(166, 26);
+            this.sair.Size = new System.Drawing.Size(133, 26);
             this.sair.Text = "Sair";
             this.sair.Click += new System.EventHandler(this.Sair_Click);
             // 
@@ -200,34 +203,34 @@ namespace windows_forms_application
             this.licenca,
             this.doacao});
             this.Info.Name = "Info";
-            this.Info.Size = new System.Drawing.Size(49, 24);
+            this.Info.Size = new System.Drawing.Size(37, 20);
             this.Info.Text = "Info";
             // 
             // sobre
             // 
             this.sobre.Name = "sobre";
-            this.sobre.Size = new System.Drawing.Size(144, 26);
+            this.sobre.Size = new System.Drawing.Size(118, 26);
             this.sobre.Text = "Sobre";
             this.sobre.Click += new System.EventHandler(this.Sobre_Click);
             // 
             // licenca
             // 
             this.licenca.Name = "licenca";
-            this.licenca.Size = new System.Drawing.Size(144, 26);
+            this.licenca.Size = new System.Drawing.Size(118, 26);
             this.licenca.Text = "Licença";
             this.licenca.Click += new System.EventHandler(this.Licenca_Click);
             // 
             // doacao
             // 
             this.doacao.Name = "doacao";
-            this.doacao.Size = new System.Drawing.Size(144, 26);
+            this.doacao.Size = new System.Drawing.Size(118, 26);
             this.doacao.Text = "Doação";
             this.doacao.Click += new System.EventHandler(this.Doacao_Click);
             // 
             // Cadastro
             // 
             this.Cadastro.Name = "Cadastro";
-            this.Cadastro.Size = new System.Drawing.Size(245, 24);
+            this.Cadastro.Size = new System.Drawing.Size(165, 20);
             this.Cadastro.Text = "Cadastro com tratamento de erro";
             this.Cadastro.Click += new System.EventHandler(this.Cadastro_Click);
             // 
@@ -247,11 +250,31 @@ namespace windows_forms_application
             this.Timer.Interval = 1000;
             this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
+            // NotifyIcon
+            // 
+            this.NotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyIcon.Icon")));
+            this.NotifyIcon.Text = "Meu 1º programa C#";
+            this.NotifyIcon.Visible = true;
+            this.NotifyIcon.Click += new System.EventHandler(this.NotifyIcon1_Click);
+            this.NotifyIcon.DoubleClick += new System.EventHandler(this.NotifyIcon1_DoubleClick);
+            // 
+            // BtnNotificacao
+            // 
+            this.BtnNotificacao.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnNotificacao.Location = new System.Drawing.Point(686, 79);
+            this.BtnNotificacao.Name = "BtnNotificacao";
+            this.BtnNotificacao.Size = new System.Drawing.Size(162, 75);
+            this.BtnNotificacao.TabIndex = 10;
+            this.BtnNotificacao.Text = "Dar notificação";
+            this.BtnNotificacao.UseVisualStyleBackColor = true;
+            this.BtnNotificacao.Click += new System.EventHandler(this.BtnNotificacao_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 680);
+            this.Controls.Add(this.BtnNotificacao);
             this.Controls.Add(this.LblHoraAtual);
             this.Controls.Add(this.lblNomeGrid);
             this.Controls.Add(this.dataGridView);
@@ -262,6 +285,7 @@ namespace windows_forms_application
             this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Aplicação 1";
@@ -295,7 +319,8 @@ namespace windows_forms_application
         private System.Windows.Forms.Label LblHoraAtual;
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.ToolStripMenuItem Cadastro;
-        private System.Windows.Forms.ToolStripMenuItem Arquivo;
+        private System.Windows.Forms.NotifyIcon NotifyIcon;
+        private System.Windows.Forms.Button BtnNotificacao;
     }
 }
 

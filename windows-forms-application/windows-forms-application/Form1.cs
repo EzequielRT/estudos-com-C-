@@ -20,7 +20,13 @@ namespace windows_forms_application
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            atualizaHora();
+            var contextMenu = new ContextMenuStrip();
+            contextMenu.Items.Add(new ToolStripMenuItem("Abrir Ler arquivo", null, NovoTexto_Click));
+            contextMenu.Items.Add(new ToolStripMenuItem("Abrir Cadastro", null, Cadastro_Click));
+            contextMenu.Items.Add(new ToolStripMenuItem("Fechar", null, Sair_Click));            
+            NotifyIcon.ContextMenuStrip = contextMenu;
+
+            AtualizaHora();
 
             /***********************************************/
             cboEstados.DataSource = Estado.Lista();
@@ -68,7 +74,7 @@ namespace windows_forms_application
 
         }
 
-        private void atualizaHora()
+        private void AtualizaHora()
         {
             LblHoraAtual.Text = "Dia e Hora atual: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         }
@@ -115,12 +121,27 @@ namespace windows_forms_application
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            atualizaHora();
+            AtualizaHora();
         }
 
         private void Cadastro_Click(object sender, EventArgs e)
         {
             new FrmCadastro().Show();
+        }
+
+        private void NotifyIcon1_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Cliquei no icone");
+        }
+
+        private void NotifyIcon1_DoubleClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("dois cliques no icone");
+        }
+
+        private void BtnNotificacao_Click(object sender, EventArgs e)
+        {
+            NotifyIcon.ShowBalloonTip(10, "Notificação", "Erro na aplicação", ToolTipIcon.Error);
         }
     }
 }
