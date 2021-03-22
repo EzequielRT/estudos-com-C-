@@ -117,5 +117,10 @@ namespace windows_forms_application
         {
             atualizaHora();
         }
+
+        private void Cadastro_Click(object sender, EventArgs e)
+        {
+            new FrmCadastro().Show();
+        }
     }
 }
