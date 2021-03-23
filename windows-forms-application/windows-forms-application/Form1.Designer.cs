@@ -52,6 +52,7 @@ namespace windows_forms_application
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.BtnNotificacao = new System.Windows.Forms.Button();
+            this.Button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -269,11 +270,22 @@ namespace windows_forms_application
             this.BtnNotificacao.UseVisualStyleBackColor = true;
             this.BtnNotificacao.Click += new System.EventHandler(this.BtnNotificacao_Click);
             // 
+            // Button1
+            // 
+            this.Button1.Location = new System.Drawing.Point(464, 571);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(484, 69);
+            this.Button1.TabIndex = 11;
+            this.Button1.Text = "MDI Form";
+            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 680);
+            this.Controls.Add(this.Button1);
             this.Controls.Add(this.BtnNotificacao);
             this.Controls.Add(this.LblHoraAtual);
             this.Controls.Add(this.lblNomeGrid);
@@ -321,6 +333,7 @@ namespace windows_forms_application
         private System.Windows.Forms.ToolStripMenuItem Cadastro;
         private System.Windows.Forms.NotifyIcon NotifyIcon;
         private System.Windows.Forms.Button BtnNotificacao;
+        private System.Windows.Forms.Button Button1;
     }
 }
 

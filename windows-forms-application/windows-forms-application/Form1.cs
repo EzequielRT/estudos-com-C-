@@ -96,7 +96,9 @@ namespace windows_forms_application
 
         private void NovoTexto_Click(object sender, EventArgs e)
         {
-            new FrmTexto().Show();
+            var frmTexto = new FrmTexto();
+            frmTexto.MdiParent = MDISingleton.InstanciaMDI();
+            frmTexto.Show();
         }
 
         private void Sair_Click(object sender, EventArgs e)
@@ -142,6 +144,11 @@ namespace windows_forms_application
         private void BtnNotificacao_Click(object sender, EventArgs e)
         {
             NotifyIcon.ShowBalloonTip(10, "Notificação", "Erro na aplicação", ToolTipIcon.Error);
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            new MDIParentPrincipal().Show();
         }
     }
 }
