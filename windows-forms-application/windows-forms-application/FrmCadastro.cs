@@ -53,6 +53,16 @@ namespace windows_forms_application
                 MessageBox.Show("Todas as minhas exceções tratadas.");
             }
         }
+
+        private void MaskedTextBox1_Leave(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(MaskedTextBox1.Text);
+        }
     }
 
     public class ErroDeProposito : Exception

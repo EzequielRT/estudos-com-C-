@@ -87,5 +87,12 @@ namespace windows_forms_application
             form1.MdiParent = this;
             form1.Show();
         }
+
+        private void MDIParentPrincipal_Load(object sender, EventArgs e)
+        {
+            var frmCadastro = new FrmCadastro();
+            frmCadastro.MdiParent = this;
+            frmCadastro.Show();
+        }
     }
 }

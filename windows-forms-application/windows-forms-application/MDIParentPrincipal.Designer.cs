@@ -34,9 +34,9 @@ namespace windows_forms_application
             this.MenuArquivo = new System.Windows.Forms.ToolStripMenuItem();
             this.NovoFormulario = new System.Windows.Forms.ToolStripMenuItem();
             this.AbrirFormulario = new System.Windows.Forms.ToolStripMenuItem();
+            this.AbrirForm1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.Sair = new System.Windows.Forms.ToolStripMenuItem();
-            this.AbrirForm1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@ namespace windows_forms_application
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip.Size = new System.Drawing.Size(2077, 24);
+            this.menuStrip.Size = new System.Drawing.Size(2598, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -85,6 +85,14 @@ namespace windows_forms_application
             this.AbrirFormulario.Text = "Abrir";
             this.AbrirFormulario.Click += new System.EventHandler(this.OpenFile);
             // 
+            // AbrirForm1
+            // 
+            this.AbrirForm1.Image = global::windows_forms_application.Properties.Resources.formularios_do_google;
+            this.AbrirForm1.Name = "AbrirForm1";
+            this.AbrirForm1.Size = new System.Drawing.Size(191, 26);
+            this.AbrirForm1.Text = "Form 1";
+            this.AbrirForm1.Click += new System.EventHandler(this.AbrirForm1_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -97,19 +105,11 @@ namespace windows_forms_application
             this.Sair.Text = "Sair";
             this.Sair.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
-            // AbrirForm1
-            // 
-            this.AbrirForm1.Image = global::windows_forms_application.Properties.Resources.formularios_do_google;
-            this.AbrirForm1.Name = "AbrirForm1";
-            this.AbrirForm1.Size = new System.Drawing.Size(191, 26);
-            this.AbrirForm1.Text = "Form 1";
-            this.AbrirForm1.Click += new System.EventHandler(this.AbrirForm1_Click);
-            // 
             // MDIParentPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2077, 1325);
+            this.ClientSize = new System.Drawing.Size(2598, 1325);
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -118,6 +118,7 @@ namespace windows_forms_application
             this.Name = "MDIParentPrincipal";
             this.Text = "MDIParentPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MDIParentPrincipal_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
