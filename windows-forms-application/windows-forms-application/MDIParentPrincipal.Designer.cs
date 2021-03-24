@@ -35,6 +35,7 @@ namespace windows_forms_application
             this.NovoFormulario = new System.Windows.Forms.ToolStripMenuItem();
             this.AbrirFormulario = new System.Windows.Forms.ToolStripMenuItem();
             this.AbrirForm1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProgressBar = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.Sair = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
@@ -48,7 +49,7 @@ namespace windows_forms_application
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip.Size = new System.Drawing.Size(2598, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1105, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -58,6 +59,7 @@ namespace windows_forms_application
             this.NovoFormulario,
             this.AbrirFormulario,
             this.AbrirForm1,
+            this.ProgressBar,
             this.toolStripSeparator1,
             this.Sair});
             this.MenuArquivo.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
@@ -93,6 +95,13 @@ namespace windows_forms_application
             this.AbrirForm1.Text = "Form 1";
             this.AbrirForm1.Click += new System.EventHandler(this.AbrirForm1_Click);
             // 
+            // ProgressBar
+            // 
+            this.ProgressBar.Name = "ProgressBar";
+            this.ProgressBar.Size = new System.Drawing.Size(191, 26);
+            this.ProgressBar.Text = "Progress Bar";
+            this.ProgressBar.Click += new System.EventHandler(this.ProgressBar_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -109,7 +118,7 @@ namespace windows_forms_application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2598, 1325);
+            this.ClientSize = new System.Drawing.Size(1105, 780);
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -135,6 +144,7 @@ namespace windows_forms_application
         private System.Windows.Forms.ToolStripMenuItem Sair;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem AbrirForm1;
+        private System.Windows.Forms.ToolStripMenuItem ProgressBar;
     }
 }
 

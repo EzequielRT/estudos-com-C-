@@ -94,5 +94,12 @@ namespace windows_forms_application
             frmCadastro.MdiParent = this;
             frmCadastro.Show();
         }
+
+        private void ProgressBar_Click(object sender, EventArgs e)
+        {
+            var frmImportador = new FrmImportador();
+            frmImportador.MdiParent = this;
+            frmImportador.Show();
+        }
     }
 }

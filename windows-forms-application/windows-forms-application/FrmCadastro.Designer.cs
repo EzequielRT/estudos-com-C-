@@ -29,6 +29,7 @@ namespace windows_forms_application
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastro));
             this.label1 = new System.Windows.Forms.Label();
             this.TxtNome = new System.Windows.Forms.TextBox();
             this.TxtNumero = new System.Windows.Forms.TextBox();
@@ -44,7 +45,7 @@ namespace windows_forms_application
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(223, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 28);
+            this.label1.Size = new System.Drawing.Size(53, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome";
             // 
@@ -68,7 +69,7 @@ namespace windows_forms_application
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(208, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 28);
+            this.label2.Size = new System.Drawing.Size(68, 21);
             this.label2.TabIndex = 2;
             this.label2.Text = "Número";
             // 
@@ -105,7 +106,7 @@ namespace windows_forms_application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 623);
+            this.ClientSize = new System.Drawing.Size(1038, 650);
             this.Controls.Add(this.Button1);
             this.Controls.Add(this.MaskedTextBox1);
             this.Controls.Add(this.BtnCalcular);
@@ -113,6 +114,7 @@ namespace windows_forms_application
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtNome);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCadastro";
             this.Text = "FrmCadastro";
             this.ResumeLayout(false);

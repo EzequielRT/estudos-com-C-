@@ -63,7 +63,7 @@ namespace windows_forms_application
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(33, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(495, 32);
+            this.label1.Size = new System.Drawing.Size(393, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pressione OK para preencher a caixa de texto";
             // 
@@ -138,7 +138,7 @@ namespace windows_forms_application
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(33, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 32);
+            this.label2.Size = new System.Drawing.Size(80, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Estados:";
             // 
@@ -157,7 +157,7 @@ namespace windows_forms_application
             this.lblNomeGrid.AutoSize = true;
             this.lblNomeGrid.Location = new System.Drawing.Point(608, 337);
             this.lblNomeGrid.Name = "lblNomeGrid";
-            this.lblNomeGrid.Size = new System.Drawing.Size(205, 20);
+            this.lblNomeGrid.Size = new System.Drawing.Size(159, 15);
             this.lblNomeGrid.TabIndex = 7;
             this.lblNomeGrid.Text = "Dados da coleção de estados";
             // 
@@ -241,7 +241,7 @@ namespace windows_forms_application
             this.LblHoraAtual.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LblHoraAtual.Location = new System.Drawing.Point(465, 242);
             this.LblHoraAtual.Name = "LblHoraAtual";
-            this.LblHoraAtual.Size = new System.Drawing.Size(473, 37);
+            this.LblHoraAtual.Size = new System.Drawing.Size(361, 30);
             this.LblHoraAtual.TabIndex = 9;
             this.LblHoraAtual.Text = "Dia e Hora atual: 01/01/0000 00:00:00";
             // 
