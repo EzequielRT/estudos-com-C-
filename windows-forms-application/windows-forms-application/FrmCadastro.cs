@@ -63,6 +63,11 @@ namespace windows_forms_application
         {
             MessageBox.Show(MaskedTextBox1.Text);
         }
+
+        private void BotaoDeBusca_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Estou buscando no banco de dados com o termo: " + TxtBuscaTool.Text);
+        }
     }
 
     public class ErroDeProposito : Exception
