@@ -101,5 +101,15 @@ namespace windows_forms_application
             frmImportador.MdiParent = this;
             frmImportador.Show();
         }
+
+        private void BtnPanel_Click(object sender, EventArgs e)
+        {
+            new FrmPanel().Show();
+        }
+
+        private void BtnTabControl_Click(object sender, EventArgs e)
+        {
+            new FrmTabControl().Show();
+        }
     }
 }

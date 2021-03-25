@@ -38,6 +38,8 @@ namespace windows_forms_application
             this.ProgressBar = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.Sair = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnPanel = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnTabControl = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,11 +47,13 @@ namespace windows_forms_application
             // 
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuArquivo});
+            this.MenuArquivo,
+            this.BtnPanel,
+            this.BtnTabControl});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip.Size = new System.Drawing.Size(1105, 24);
+            this.menuStrip.Size = new System.Drawing.Size(2166, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -114,11 +118,25 @@ namespace windows_forms_application
             this.Sair.Text = "Sair";
             this.Sair.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
+            // BtnPanel
+            // 
+            this.BtnPanel.Name = "BtnPanel";
+            this.BtnPanel.Size = new System.Drawing.Size(43, 18);
+            this.BtnPanel.Text = "Panel";
+            this.BtnPanel.Click += new System.EventHandler(this.BtnPanel_Click);
+            // 
+            // BtnTabControl
+            // 
+            this.BtnTabControl.Name = "BtnTabControl";
+            this.BtnTabControl.Size = new System.Drawing.Size(69, 18);
+            this.BtnTabControl.Text = " TabControl";
+            this.BtnTabControl.Click += new System.EventHandler(this.BtnTabControl_Click);
+            // 
             // MDIParentPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 780);
+            this.ClientSize = new System.Drawing.Size(2166, 1325);
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -145,6 +163,8 @@ namespace windows_forms_application
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem AbrirForm1;
         private System.Windows.Forms.ToolStripMenuItem ProgressBar;
+        private System.Windows.Forms.ToolStripMenuItem BtnPanel;
+        private System.Windows.Forms.ToolStripMenuItem BtnTabControl;
     }
 }
 
