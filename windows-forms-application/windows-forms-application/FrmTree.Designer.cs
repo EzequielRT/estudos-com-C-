@@ -110,6 +110,7 @@ namespace windows_forms_application
             this.Controls.Add(this.TreeView1);
             this.Name = "FrmTree";
             this.Text = "FrmTree";
+            this.Load += new System.EventHandler(this.FrmTree_Load);
             this.ResumeLayout(false);
 
         }
