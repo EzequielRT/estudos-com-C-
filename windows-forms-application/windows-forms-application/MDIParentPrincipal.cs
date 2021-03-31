@@ -111,5 +111,10 @@ namespace windows_forms_application
         {
             new FrmTabControl().Show();
         }
+
+        private void BtnTreeView_Click(object sender, EventArgs e)
+        {
+            new FrmTree().Show();
+        }
     }
 }

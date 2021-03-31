@@ -40,6 +40,7 @@ namespace windows_forms_application
             this.Sair = new System.Windows.Forms.ToolStripMenuItem();
             this.BtnPanel = new System.Windows.Forms.ToolStripMenuItem();
             this.BtnTabControl = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnTreeView = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,11 +50,12 @@ namespace windows_forms_application
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuArquivo,
             this.BtnPanel,
-            this.BtnTabControl});
+            this.BtnTabControl,
+            this.BtnTreeView});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip.Size = new System.Drawing.Size(2166, 24);
+            this.menuStrip.Size = new System.Drawing.Size(2710, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -132,11 +134,18 @@ namespace windows_forms_application
             this.BtnTabControl.Text = " TabControl";
             this.BtnTabControl.Click += new System.EventHandler(this.BtnTabControl_Click);
             // 
+            // BtnTreeView
+            // 
+            this.BtnTreeView.Name = "BtnTreeView";
+            this.BtnTreeView.Size = new System.Drawing.Size(56, 18);
+            this.BtnTreeView.Text = "TreeView";
+            this.BtnTreeView.Click += new System.EventHandler(this.BtnTreeView_Click);
+            // 
             // MDIParentPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2166, 1325);
+            this.ClientSize = new System.Drawing.Size(2710, 1325);
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -165,6 +174,7 @@ namespace windows_forms_application
         private System.Windows.Forms.ToolStripMenuItem ProgressBar;
         private System.Windows.Forms.ToolStripMenuItem BtnPanel;
         private System.Windows.Forms.ToolStripMenuItem BtnTabControl;
+        private System.Windows.Forms.ToolStripMenuItem BtnTreeView;
     }
 }
 
