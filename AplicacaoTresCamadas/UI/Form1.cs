@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace AplicacaoTresCamadas
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void BtnGravar_Click(object sender, EventArgs e)
+        {
+            var usuario = new Usuario();
+            usuario.Nome = TxtNome.Text;
+            usuario.Telefone = TxtTelefone.Text;
+            usuario.CPF = TxtCPF.Text;
+            usuario.Gravar();
+
+            MessageBox.Show("Usuário salvo com sucesso!");
         }
     }
 }
