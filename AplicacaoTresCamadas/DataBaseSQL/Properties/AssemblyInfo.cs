@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associada a um assembly.
-[assembly: AssemblyTitle("DataBaseTxt")]
+[assembly: AssemblyTitle("DataBaseSQL")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DataBaseTxt")]
+[assembly: AssemblyProduct("DataBaseSQL")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // O GUID a seguir será destinado à ID de typelib se este projeto for exposto para COM
-[assembly: Guid("a4074a67-c194-426f-9d80-7cb8c1ceb622")]
+[assembly: Guid("1a46e73a-21c6-4a7d-909d-e15d430f33a4")]
 
 // As informações da versão de um assembly consistem nos quatro valores a seguir:
 //

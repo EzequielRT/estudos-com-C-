@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataBaseTxt
+namespace DataBaseSQL
 {
-    public interface IPessoa
+    public interface IPessoa 
     {
         void SetNome(string nome);
         void SetTelefone(string telefone);

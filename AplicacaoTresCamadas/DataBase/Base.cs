@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataBase
+namespace DataBaseTxt
 {
     public abstract class Base : IPessoa
     {
